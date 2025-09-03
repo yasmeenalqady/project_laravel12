@@ -1,0 +1,198 @@
+
+  body, h1, h2, h3, p, a, button {
+  font-family: 'Cairo', sans-serif;
+  
+}
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  /* --------------------------------------- */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1.2s ease;
+    }
+    .fade-up.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+/* circle-------------------------------------------------------------- */
+  .circle {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  .circle.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .circle:hover {
+    transform: translateY(0) scale(1.05);
+    z-index: 1000; /* تظهر فوق الدوائر الأخرى عند hover */
+  }
+
+  /* تداخل بسيط أفقياً على الشاشات الكبيرة */
+  @media (min-width: 768px) {
+    .circle + .circle {
+      margin-left: -1.5rem; /* -24px تداخل بسيط */
+    }
+  }
+
+  /* تداخل راسي على الجوال */
+  @media (max-width: 767px) {
+    .circle + .circle {
+      margin-top: -1.5rem; /* -24px تداخل عمودي */
+    }
+  }
+
+  /* ------------------------------------------------------ */
+
+  /* إخفاء شريط التمرير الأفقي */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* تعديل الخطوط والنقاط */
+  .timeline-point {
+    position: relative;
+    transition: all 0.7s ease;
+  }
+
+  /* هذه الطبقة تُخفي كل النقاط افتراضياً */
+  .timeline-point.opacity-0 {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .timeline-point.opacity-100 {
+    opacity: 1;
+    transform: translateY(0);
+  }
+/* --------------------------------------------------------------- */
+#overlayMenu {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+}
+#overlayMenu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* دوران الأزرار فقط */
+#menuBtn, #closeBtn {
+  transition: transform 0.5s ease;
+  /* لا تغير مكانهم */
+}
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+
+  @keyframes bounce-scale {
+    0%, 100% { transform: scale(1) translateY(0); }
+    50% { transform: scale(1.1) translateY(-4px); }
+  }
+
+  @keyframes pulse-rotate {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(3deg) scale(1.05); }
+    100% { transform: rotate(-3deg) scale(1); }
+  }
+
+  .hover-animated:hover {
+    animation: wiggle 0.3s ease-in-out, bounce-scale 0.5s ease-in-out, pulse-rotate 0.6s ease-in-out;
+  }
+  /* ----------------------------------------list  */
+
+    .fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.6s ease forwards;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.slide-in-left {
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* slider----------------------------------------- */
+  .slider-track {
+      display: flex;
+      animation: scroll 20s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+
+       .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+ 
+  #canvasPath {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10; /* رفع الطبقة ليظهر فوق المحتوى إذا أردت */
+  background: transparent; /* تأكد أنه شفاف لو أردت فقط الخط */
+}
+@media (max-width: 768px) {
+  #canvasPath {
+    display: none;
+  }
+}
