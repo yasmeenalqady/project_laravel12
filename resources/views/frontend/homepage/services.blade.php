@@ -1,4 +1,4 @@
-<section id="network-section" class="bg-cover bg-center min-h-screen flex items-center justify-center relative transition-background duration-500" 
+<section id="network-section" class=" hidden-section bg-cover bg-center min-h-screen flex items-center justify-center relative transition-background duration-500" 
     style="background-image: url('https://images.unsplash.com/photo-1496307653780-42ee777d4833?auto=format&fit=crop&w=1470&q=80');">
     
     <!-- خلفية شفافة -->
@@ -89,3 +89,329 @@
 
     </div>
   </section>
+<script>
+  const data = {
+    "Algeria": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/uae_Edited.jpg",
+      cards: {
+        studentReach: "105,000",
+        volunteers: "1,550",
+        schools: "-",
+        universities: "70",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "Bahrain": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/bahrain_Edited.jpg",
+      cards: {
+        studentReach: "50,000",
+        volunteers: "900",
+        schools: "120",
+        universities: "15",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "Egypt": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/Egypt_Edited.jpg",
+      cards: {
+        studentReach: "250,000",
+        volunteers: "3,000",
+        schools: "300",
+        universities: "40",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "Kuwait": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/kuwait_Edited.jpg",
+      cards: {
+        studentReach: "40,000",
+        volunteers: "1,200",
+        schools: "80",
+        universities: "20",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "Lebanon": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/lebanon_Edited.jpg",
+      cards: {
+        studentReach: "35,000",
+        volunteers: "800",
+        schools: "60",
+        universities: "18",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "Morocco": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/morocco_Edited.jpg",
+      cards: {
+        studentReach: "45,000",
+        volunteers: "1,000",
+        schools: "75",
+        universities: "22",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "Oman": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/oman_Edited.jpg",
+      cards: {
+        studentReach: "28,000",
+        volunteers: "600",
+        schools: "50",
+        universities: "12",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "Palestine": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/palestine_Edited.jpg",
+      cards: {
+        studentReach: "15,000",
+        volunteers: "300",
+        schools: "40",
+        universities: "10",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "Qatar": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/qatar_Edited.jpg",
+      cards: {
+        studentReach: "22,000",
+        volunteers: "450",
+        schools: "35",
+        universities: "8",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "Saudi Arabia": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/saudi_Edited.jpg",
+      cards: {
+        studentReach: "500,000",
+        volunteers: "5,000",
+        schools: "700",
+        universities: "120",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "Tunisia": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/tunsia_Edited.jpg",
+      cards: {
+        studentReach: "38,000",
+        volunteers: "850",
+        schools: "90",
+        universities: "25",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "United Arab Emirates": {
+      background: "https://injazalarab.org/cms/sites/default/files/2023-02/uae_Edited.jpg",
+      cards: {
+        studentReach: "80,000",
+        volunteers: "1,200",
+        schools: "110",
+        universities: "30",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    },
+    "Yemen": {
+      background: "https://injazalarab.org/cms/sites/default/files/2019-11/Yemen.jpg",
+      cards: {
+        studentReach: "12,000",
+        volunteers: "250",
+        schools: "30",
+        universities: "8",
+        profileLink: "#",
+        links: {
+          main: "#",
+          facebook: "#",
+          instagram: "#",
+          twitter: "#",
+          linkedin: "#"
+        }
+      }
+    }
+  };
+
+  // اختيار العناصر من DOM
+  const section = document.getElementById('network-section');
+  const select = document.getElementById('country-select');
+  const cards = {
+    studentReach: document.getElementById('student-reach'),
+    volunteers: document.getElementById('volunteers'),
+    schools: document.getElementById('schools'),
+    universities: document.getElementById('universities'),
+    profileLink: document.getElementById('profile-link'),
+    links: {
+      main: document.getElementById('link-main'),
+      facebook: document.getElementById('link-facebook'),
+      instagram: document.getElementById('link-instagram'),
+      twitter: document.getElementById('link-twitter'),
+      linkedin: document.getElementById('link-linkedin'),
+    }
+  };
+
+  // تحديث البيانات في الكروت وخلفية القسم
+function updateContent(country) {
+  if (!data[country]) return;
+
+  const countryData = data[country];
+  // تغيير الخلفية
+  section.style.backgroundImage = `url('${countryData.background}')`;
+
+  // انزلاق من اليمين على الكروت
+  const cardsContainer = document.getElementById('cards-container');
+  cardsContainer.classList.remove('slide-in-right');
+  void cardsContainer.offsetWidth; // force reflow
+  cardsContainer.classList.add('slide-in-right');
+
+  // انزلاق من اليسار على قائمة الدول (للشاشات الكبيرة فقط)
+  const countryList = document.getElementById('country-list');
+  countryList.classList.remove('slide-in-left');
+  void countryList.offsetWidth; // force reflow
+  countryList.classList.add('slide-in-left');
+
+  // تحديث البيانات في الكروت
+  cards.studentReach.textContent = countryData.cards.studentReach;
+  cards.volunteers.textContent = countryData.cards.volunteers;
+  cards.schools.textContent = countryData.cards.schools;
+  cards.universities.textContent = countryData.cards.universities;
+  cards.profileLink.href = countryData.cards.profileLink;
+
+  // تحديث روابط التواصل
+  cards.links.main.href = countryData.cards.links.main;
+  cards.links.facebook.href = countryData.cards.links.facebook;
+  cards.links.instagram.href = countryData.cards.links.instagram;
+  cards.links.twitter.href = countryData.cards.links.twitter;
+  cards.links.linkedin.href = countryData.cards.links.linkedin;
+}
+
+
+  // تمييز العنصر المختار في القائمة الكبيرة
+  function highlightSelectedCountry(selectedCountry) {
+    countryItems.forEach(item => {
+      if (item.getAttribute('data-country') === selectedCountry) {
+        item.classList.add('bg-cyan-600', 'text-white', 'font-semibold', 'w-40', 'rounded-full', 'inline-block', 'text-left');
+        item.classList.remove('hover:bg-cyan-500', 'hover:text-white');
+      } else {
+        item.classList.remove('bg-cyan-600', 'text-white', 'font-semibold', 'w-40', 'rounded-full', 'inline-block', 'text-center');
+        item.classList.add('hover:bg-cyan-500', 'hover:text-white');
+      }
+    });
+  }
+
+  // دعم اختيار الدول من القائمة الكبيرة (الشاشات الكبيرة)
+  const countryItems = document.querySelectorAll('.country-item');
+  countryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const country = item.getAttribute('data-country');
+      updateContent(country);
+      highlightSelectedCountry(country);
+      select.value = country; // تزامن القائمة المنسدلة مع التحديد
+    });
+  });
+
+  // عند تغيير اختيار القائمة المنسدلة (الجوال)
+  select.addEventListener('change', (e) => {
+    const selectedCountry = e.target.value;
+    updateContent(selectedCountry);
+    highlightSelectedCountry(selectedCountry);
+  });
+
+  // تعيين بيانات أول دولة عند التحميل مع تمييز العنصر المناسب
+  document.addEventListener('DOMContentLoaded', () => {
+    // بداية مع الدولة الأولى بالقائمة المنسدلة (أو الجزائر)
+    const initialCountry = select.value || "Algeria";
+    updateContent(initialCountry);
+    highlightSelectedCountry(initialCountry);
+  });
+
+  //////////////////////////////////////////////////
+
+
+
+/////////////////////////////
+
+
+</script>

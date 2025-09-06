@@ -1,4 +1,4 @@
-<canvas id="canvasPath" style="position:fixed; top:0; left:0; z-index:11; pointer-events:none;"></canvas>
+<canvas id="canvasPath" style="position:fixed; top:0; left:0; z-index:11; pointer-events:none; " ></canvas>
 
 <!-- Hero Section -------------------------------------------1---------------------------------->
 <section class="relative h-screen text-white overflow-hidden" dir="rtl">
@@ -127,3 +127,38 @@
     </a>
   </div>
 </div>
+
+<script>
+  /// زر القائمة ------------------------------------------------------------------------------------
+
+ // في السكريبت
+const menuBtn = document.getElementById('menuBtn');
+const overlayMenu = document.getElementById('overlayMenu');
+const closeBtn = document.getElementById('closeBtn');
+
+menuBtn.addEventListener('click', () => {
+  overlayMenu.classList.remove('hidden');
+  requestAnimationFrame(() => {
+    overlayMenu.classList.add('show');
+  });
+  // فقط دوران زر الفتح (menuBtn)
+  menuBtn.style.transform = 'rotate(180deg)';
+});
+
+closeBtn.addEventListener('click', () => {
+  overlayMenu.classList.remove('show');
+  // دوران زر الفتح إلى الأصل
+  menuBtn.style.transform = 'rotate(0deg)';
+  closeBtn.style.transform = 'rotate(0deg)';
+
+  overlayMenu.addEventListener('transitionend', () => {
+    if (!overlayMenu.classList.contains('show')) {
+      overlayMenu.classList.add('hidden');
+    }
+  }, { once: true });
+  
+  // دوران زر الإغلاق (closeBtn) عند الضغط عليه
+  closeBtn.style.transform = 'rotate(180deg)';
+});
+
+</script>

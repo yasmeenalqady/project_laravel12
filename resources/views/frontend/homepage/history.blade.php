@@ -1,6 +1,6 @@
 <section
   id="history-section"
-  class="relative min-h-[70vh] bg-cover bg-center mt-6 flex flex-col items-center justify-center px-4 pb-20"
+  class=" hidden-section relative min-h-[70vh] bg-cover bg-center mt-6 flex flex-col items-center justify-center px-4 pb-20"
   style="background-image: url('https://injazalarab.org/cms/sites/default/files/2023-02/support_Edited_2_0.png'); background-position: center center;"
 >
   <!-- طبقة خلفية سوداء شفافة -->

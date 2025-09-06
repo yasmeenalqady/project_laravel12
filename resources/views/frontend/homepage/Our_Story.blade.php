@@ -1,7 +1,7 @@
 <section
   id="history-section"
   class="relative min-h-[70vh] bg-cover bg-center mt-6 flex flex-col items-center justify-center px-4 pb-20"
-  style="background-image: url('https://injazalarab.org/cms/sites/default/files/2023-02/support_Edited_2_0.png'); background-position: center center;"
+  style=" hidden-section background-image: url('https://injazalarab.org/cms/sites/default/files/2023-02/support_Edited_2_0.png'); background-position: center center;"
 >
   <!-- طبقة خلفية سوداء شفافة -->
   <div class="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -20,7 +20,7 @@
 
     <!-- النص الأيسر -->
     <div id="right-text"
-         class="text-right w-full md:w-1/2 space-y-4 mt-8 md:mt-12 transform transition duration-1000 opacity-0 -translate-x-12">
+         class=" hidden-section text-right w-full md:w-1/2 space-y-4 mt-8 md:mt-12 transform transition duration-1000 opacity-0 -translate-x-12">
       <p class="uppercase text-sm tracking-wide text-gray-400 font-semibold">قصتنا</p>
       <p class="text-lg leading-relaxed text-xl">
         <strong>إنجاز</strong> وُلدت من إيماننا الراسخ بالقدرات اللامحدودة للشباب في

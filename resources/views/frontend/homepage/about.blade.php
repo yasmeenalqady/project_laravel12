@@ -1,4 +1,4 @@
-<section id="animateMe" class="fade-up opacity-0 translate-y-8 relative container mx-auto px-6 md:px-16 py-5 md:py-16 mt-8 flex flex-col md:flex-row-reverse items-start justify-center gap-4 md:gap-6">
+<section id="animateMe" class="hidden-section  relative container mx-auto px-6 md:px-16 py-5 md:py-16 mt-8 flex flex-col md:flex-row-reverse items-start justify-center gap-4 md:gap-6">
   
   <!-- النص الأيمن (سيظهر على اليسار في RTL) -->
   <div class="text-right w-full md:w-1/2">
@@ -23,25 +23,3 @@
 
 </section>
 
-<script>
-  const animateSection = document.getElementById('animateMe');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        animateSection.classList.remove('opacity-0', 'translate-y-8');
-        animateSection.classList.add('opacity-100', 'translate-y-0');
-        observer.unobserve(animateSection); // يظهر مرة واحدة فقط
-      }
-    });
-  }, { threshold: 0.3 });
-
-  observer.observe(animateSection);
-</script>
-
-<style>
-/* التأثير عند الظهور */
-.fade-up {
-  transition: all 0.8s ease-out;
-}
-</style>
