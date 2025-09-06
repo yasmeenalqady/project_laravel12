@@ -9,8 +9,8 @@
 }
 </style>
 
-<section class="fade-up py-20 px-5 md:px-20">
-  <div class="text-center mb-12 fade-up">
+<section class="hidden-section py-20 px-5 md:px-20">
+  <div class="text-center mb-12 ">
     <h2 class="text-3xl sm:text-4xl font-bold text-teal-600">
       شركاؤنا
     </h2>
